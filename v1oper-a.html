@@ -1015,6 +1015,9 @@
             }
         }
         function updateUrlBar(url) {
+<<<<<<< HEAD
+url = ""
+=======
             // Check if the URL is the specific landing page path
             if (url.toLowerCase().includes('vplaza') || url.toLowerCase().includes('file://')) {
                 urlBar.value = '(hidden)';
@@ -1024,6 +1027,7 @@
             } else {
                 urlBar.value = url;
             }
+>>>>>>> d0798f93653e3dafed86ef2b6d77b635fc6d7eec
         }
         function createNewTab() {
             const tabId = tabCounter++;
