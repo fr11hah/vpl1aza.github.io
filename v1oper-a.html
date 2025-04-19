@@ -19,8 +19,16 @@
             scrollbar-width: thin;
             scrollbar-color: #ff0044 #111111;
         }
-
-        body {
+        
+        
+        
+        .url-bar::placeholder {
+        color: transparent; /* Makes placeholder text invisible */
+    }
+      
+    
+    
+    body {
             background-color: #000000;
             color: #e8eaed;
             height: 100vh;
@@ -1014,21 +1022,16 @@
                 updateUrlBar(frameUrl);
             }
         }
+
         function updateUrlBar(url) {
-<<<<<<< HEAD
-url = ""
-=======
-            // Check if the URL is the specific landing page path
-            if (url.toLowerCase().includes('vplaza') || url.toLowerCase().includes('file://')) {
-                urlBar.value = '(hidden)';
-            } else if (url.includes('/active/embed.html?url=')) {
+            if (url.includes('/active/embed.html?url=')) {
                 const actualUrl = decodeURIComponent(url.split('/active/embed.html?url=')[1]);
                 urlBar.value = actualUrl;
             } else {
                 urlBar.value = url;
             }
->>>>>>> d0798f93653e3dafed86ef2b6d77b635fc6d7eec
         }
+
         function createNewTab() {
             const tabId = tabCounter++;
             const newTabData = {
@@ -1375,4 +1378,3 @@ url = ""
 
     </script>
 </body>
-</html>
